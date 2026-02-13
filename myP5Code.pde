@@ -3,27 +3,25 @@ setup = function(){
     size(400, 400); 
     background(255,255,255,150);
 };
+
 var shape=0;
 
 //draw Function - will run repeatedly
 draw = function() {
-   
-    if(mousePressed){
-     ellipse(mouseX, mouseY, 20, 20);
+
+    if(mousePressed && shape==0){
+      ellipse(mouseX, mouseY, 20, 20);
+    }
     
-     }
-
-     
-
-     if(shape==1){
+    if(mousePressed && shape==1){
       textSize(100);
       text("🍦", mouseX, mouseY);
-      
      }
 
-
-  //***in the video they use if(mouseIsPressed)
-  //***in github we use if(mousePressed)
+    if(mousePressed && shape==2){
+      textSize(100);
+      text("💕", mouseX, mouseY);
+     }
 
   funWithKeys();
 };
@@ -36,7 +34,9 @@ var funWithKeys = function(){
     if(key == 'g'){fill(0,randomIntensity,0);}
     if(key == 'w'){fill(255,255,255);}
     if(key == 'c'){background(255,255,255,150);}
-    if(key == 'p'){shape=1;}
+    if(key == 'i'){shape=1;}
+    if(key == 'h'){shape=2;}
+    if(key == 'c'){shape=0;}
     
   }
 };
