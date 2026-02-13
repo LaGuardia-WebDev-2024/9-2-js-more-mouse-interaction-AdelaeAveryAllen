@@ -14,12 +14,12 @@ draw = function() {
     }
     
     if(mousePressed && shape==1){
-      textSize(100);
+      textSize(random(30));
       text("🍦", mouseX, mouseY);
      }
 
     if(mousePressed && shape==2){
-      textSize(100);
+      textSize(random(30));
       text("💕", mouseX, mouseY);
      }
 
@@ -36,7 +36,7 @@ var funWithKeys = function(){
     if(key == 'c'){background(255,255,255,150);}
     if(key == 'i'){shape=1;}
     if(key == 'h'){shape=2;}
-    if(key == 'c'){shape=0;}
+    if(key == 'e'){shape=0;}
     
   }
 };
